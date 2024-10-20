@@ -16,5 +16,6 @@
     ./presence
     ./tmux-navigator
     ./zig
+    ./vim-highlightedyank
   ];
 }
