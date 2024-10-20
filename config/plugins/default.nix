@@ -15,7 +15,6 @@
     ./luasnip
     ./presence
     ./tmux-navigator
-    ./rustaceanvim
     ./zig
   ];
 }

@@ -2,6 +2,13 @@
   plugins.treesitter = {
     enable = true;
 
+    settings = {
+      highlight.enable = true;
+      indent.enable = true;
+      autopairs.enable = true;
+      folding.enable = true;
+    };
+
     grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
       c
       cpp

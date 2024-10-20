@@ -8,9 +8,9 @@
     register = "unnamedplus";
   };
 
-  #options = {
-  #  number = true;
-  #  relativenumber = true;
-  #  shiftwidth = 4;
-  #};
+  opts = {
+    number = true;
+    relativenumber = true;
+    shiftwidth = 4;
+  };
 }
