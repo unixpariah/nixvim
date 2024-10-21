@@ -1,15 +1,15 @@
 {
   plugins = {
-    cmp-nvim-lsp = { enable = true; };
-    cmp-buffer = { enable = true; };
-    cmp-path = { enable = true; };
-    cmp-cmdline = { enable = true; };
-    cmp_luasnip = { enable = true; };
+    cmp-nvim-lsp.enable = true;
+    cmp-buffer.enable = true;
+    cmp-path.enable = true;
+    cmp-cmdline.enable = true;
+    cmp_luasnip.enable = true;
     cmp = {
       enable = true;
-      autoEnableSources = false;
+      autoEnableSources = true;
       settings = {
-        experimental = { ghost_text = true; };
+        experimental.ghost_text = true;
         mapping = {
           "<C-j>" = "cmp.mapping.select_next_item()";
           "<C-k>" = "cmp.mapping.select_prev_item()";
@@ -42,10 +42,7 @@
           "<C-f>" = "cmp.mapping.scroll_docs(4)";
           "<C-b>" = "cmp.mapping.scroll_docs(-4)";
           "<C-Space>" = "cmp.mapping.complete()";
-          "<CR>" =
-            "cmp.mapping.confirm({ select = false })"; # Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-          "<S-CR>" =
-            "cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = false })";
+          "<CR>" = "cmp.mapping.confirm({ select = true })";
         };
         sources = [
           { name = "nvim_lsp"; }
