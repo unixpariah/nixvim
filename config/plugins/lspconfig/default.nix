@@ -3,6 +3,7 @@
     enable = true;
     capabilities = "offsetEncoding = 'utf-16'";
     servers = {
+      omnisharp.enable = true;
       nixd.enable = true;
       zls.enable = true;
       clangd.enable = true;
