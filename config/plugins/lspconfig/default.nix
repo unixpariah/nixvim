@@ -12,17 +12,19 @@
         extraOptions = {
           settings = {
             Lua = {
-              completion = { callSnippet = "Replace"; };
-              diagnostics = { globals = [ "vim" ]; };
+              completion.callSnippet = "Replace";
+              diagnostics.globals = [ "vim" ];
 
-              telemetry = { enabled = false; };
-              hint = { enable = true; };
+              telemetry.enabled = false;
+              hint.enable = true;
             };
           };
         };
       };
       rust_analyzer = {
         enable = true;
+        installCargo = false;
+        installRustc = false;
         settings = {
           inlayHints = {
             enable = true;
@@ -32,6 +34,10 @@
           };
           procMacro.enable = true;
         };
+      };
+      wgsl_analyzer = {
+        enable = true;
+        package = null;
       };
     };
 

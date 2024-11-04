@@ -1,7 +1,7 @@
 {
   plugins.noice = {
     enable = true;
-    presets = {
+    settings.presets = {
       bottom_search = false;
       command_palette = false;
       inc_rename = false;
