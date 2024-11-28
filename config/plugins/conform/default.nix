@@ -3,7 +3,7 @@
     enable = true;
     settings.formatters_by_ft = {
       rust = [ "rustfmt" ];
-      wgsl = [ "rustfmt" ];
+      wgsl = [ "wgslfmt" ];
       c = [ "clang_format" ];
       cpp = [ "clang_format" ];
       glsl = [ "clang_format" ];

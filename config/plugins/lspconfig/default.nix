@@ -4,7 +4,13 @@
     capabilities = "offsetEncoding = 'utf-16'";
     servers = {
       omnisharp.enable = true;
-      nixd.enable = true;
+      nixd = {
+        enable = true;
+        extraOptions = {
+          nixos.expr = "(builtins.getFlake (\"/home/unixpariah/nixconf\").nixosConfigurations.unixpariah.options";
+          #home_manager.expr = "(builtins.getFlake (\"/home/unixpariah/nixconf\").homeConfigurations.unixpariah.options";
+        };
+      };
       zls.enable = true;
       clangd.enable = true;
       lua_ls = {
