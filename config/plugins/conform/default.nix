@@ -16,6 +16,7 @@
       asm = [ "asmfmt" ];
       zig = [ "zig fmt" ];
       sh = [ "shfmt" ];
+      go = [ "gofmt" ];
       html = {
         __unkeyed-1 = "prettierd";
         __unkeyed-2 = "prettier";

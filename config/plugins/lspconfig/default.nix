@@ -7,8 +7,8 @@
       nixd = {
         enable = true;
         extraOptions = {
-          nixos.expr = "(builtins.getFlake (\"/home/unixpariah/nixconf\").nixosConfigurations.unixpariah.options";
-          #home_manager.expr = "(builtins.getFlake (\"/home/unixpariah/nixconf\").homeConfigurations.unixpariah.options";
+          nixos.expr = "(builtins.getFlake (\"/var/lib/nixconf\").nixosConfigurations.unixpariah.options";
+          home_manager.expr = "(builtins.getFlake (\"/var/lib/nixconf\").homeConfigurations.unixpariah@laptop.options";
         };
       };
       zls.enable = true;
@@ -42,6 +42,10 @@
         };
       };
       wgsl_analyzer = {
+        enable = true;
+        package = null;
+      };
+      gopls = {
         enable = true;
         package = null;
       };
