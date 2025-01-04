@@ -6,9 +6,9 @@
       omnisharp.enable = true;
       nixd = {
         enable = true;
-        extraOptions = {
-          nixos.expr = "(builtins.getFlake (\"/var/lib/nixconf\").nixosConfigurations.unixpariah.options";
-          home_manager.expr = "(builtins.getFlake (\"/var/lib/nixconf\").homeConfigurations.unixpariah@laptop.options";
+        settings = {
+          nixpkgs.expr = "import (builtins.getFlake \"/var/lib/nixconf\").inputs.nixpkgs { }";
+          home-manager.expr = "(builtins.getFlake \"/var/lib/nixconf\").homeConfigurations.unixpariah@laptop.options";
         };
       };
       zls.enable = true;
