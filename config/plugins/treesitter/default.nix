@@ -13,6 +13,10 @@
     nixvimInjections = true;
 
     grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
+      javascript
+      typescript
+      html
+      css
       just
       c_sharp
       c

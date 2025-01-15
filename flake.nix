@@ -2,9 +2,15 @@
   description = "A nixvim configuration";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixvim.url = "github:nix-community/nixvim";
-    flake-parts.url = "github:hercules-ci/flake-parts";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    flake-parts = {
+      url = "github:hercules-ci/flake-parts";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -20,19 +26,16 @@
       perSystem =
         { pkgs, system, ... }:
         let
-          nixvimLib = nixvim.lib.${system};
-          nixvim' = nixvim.legacyPackages.${system};
           nixvimModule = {
             inherit pkgs;
             module = import ./config;
             extraSpecialArgs = { inherit inputs; };
           };
-          nvim = nixvim'.makeNixvimWithModule nixvimModule;
         in
         {
-          checks.default = nixvimLib.check.mkTestDerivationFromNixvimModule nixvimModule;
+          checks.default = nixvim.lib.${system}.check.mkTestDerivationFromNixvimModule nixvimModule;
 
-          packages.default = nvim;
+          packages.default = nixvim.legacyPackages.${system}.makeNixvimWithModule nixvimModule;
 
           formatter = pkgs.nixfmt-rfc-style;
         };
