@@ -47,7 +47,6 @@
     undofile = true;
     termguicolors = true;
     signcolumn = "yes";
-    cursorline = false;
     foldcolumn = "0";
     foldlevel = 99;
     foldlevelstart = 99;
@@ -57,16 +56,7 @@
     timeoutlen = 200;
     encoding = "utf-8";
     fileencoding = "utf-8";
-    guicursor = [
-      "n-v-c:block"
-      "i-ci-ve:block"
-      "r-cr:hor20"
-      "o:hor50"
-      "a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor"
-      "sm:block-blinkwait175-blinkoff150-blinkon175"
-    ];
     list = true;
-    listchars = "eol:↲,tab:|->,lead:·,space: ,trail:•,extends:→,precedes:←,nbsp:␣";
     cmdheight = 2;
     showmode = false;
     pumheight = 0;
