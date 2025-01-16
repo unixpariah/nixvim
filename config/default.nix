@@ -1,5 +1,13 @@
 {
-  imports = [ ./colorschemes/catppuccin.nix ./plugins ];
+  imports = [
+    ./plugins
+  ];
+
+  colorschemes.base16 = {
+    enable = true;
+    colorscheme = "tokyo-night-storm";
+    settings.telescope_borders = true;
+  };
 
   globals.mapleader = " ";
 
