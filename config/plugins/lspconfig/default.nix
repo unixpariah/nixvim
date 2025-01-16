@@ -3,18 +3,29 @@
     enable = true;
     capabilities = "offsetEncoding = 'utf-16'";
     servers = {
-      omnisharp.enable = true;
+      omnisharp = {
+        enable = true;
+        package = null;
+      };
       nixd = {
         enable = true;
+        package = null;
         settings = {
           nixpkgs.expr = "import (builtins.getFlake \"/var/lib/nixconf\").inputs.nixpkgs { }";
           home-manager.expr = "(builtins.getFlake \"/var/lib/nixconf\").homeConfigurations.unixpariah@laptop.options";
         };
       };
-      zls.enable = true;
-      clangd.enable = true;
+      zls = {
+        enable = true;
+        package = null;
+      };
+      clangd = {
+        enable = true;
+        package = null;
+      };
       lua_ls = {
         enable = true;
+        package = null;
         extraOptions = {
           settings = {
             Lua = {
@@ -29,6 +40,7 @@
       };
       rust_analyzer = {
         enable = true;
+        package = null;
         installCargo = false;
         installRustc = false;
         settings = {
@@ -51,6 +63,7 @@
       };
       ts_ls = {
         enable = true;
+        package = null;
         autostart = true;
         filetypes = [
           "javascript"
@@ -88,6 +101,7 @@
         };
       };
       eslint = {
+        package = null;
         enable = true;
       };
     };
