@@ -17,5 +17,6 @@
     ./tmux-navigator
     ./zig
     ./vim-highlightedyank
+    ./notify
   ];
 }
