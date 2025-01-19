@@ -18,5 +18,6 @@
     ./zig
     ./vim-highlightedyank
     ./notify
+    ./lint
   ];
 }

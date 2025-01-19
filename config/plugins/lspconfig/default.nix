@@ -104,9 +104,79 @@
         enable = true;
         package = null;
       };
+      tailwindcss = {
+        enable = true;
+        package = null;
+        filetypes = [
+          "aspnetcorerazor"
+          "astro"
+          "astro-markdown"
+          "blade"
+          "clojure"
+          "django-html"
+          "htmldjango"
+          "edge"
+          "eelixir"
+          "ejs"
+          "erb"
+          "eruby"
+          "gohtml"
+          "gohtmltmpl"
+          "haml"
+          "handlebars"
+          "hbs"
+          "html"
+          "htmlangular"
+          "html-eex"
+          "heex"
+          "jade"
+          "leaf"
+          "liquid"
+          "mdx"
+          "mustache"
+          "njk"
+          "nunjucks"
+          "php"
+          "razor"
+          "slim"
+          "twig"
+          "css"
+          "less"
+          "postcss"
+          "sass"
+          "scss"
+          "stylus"
+          "sugarss"
+          "javascript"
+          "javascriptreact"
+          "reason"
+          "rescript"
+          "typescript"
+          "typescriptreact"
+          "vue"
+          "svelte"
+          "templ"
+        ];
+      };
       eslint = {
         package = null;
         enable = true;
+      };
+      html = {
+        enable = true;
+        package = null;
+      };
+      cssls = {
+        enable = true;
+        package = null;
+      };
+      dockerls = {
+        enable = true;
+        package = null;
+      };
+      bashls = {
+        enable = true;
+        package = null;
       };
     };
 
