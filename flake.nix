@@ -34,7 +34,14 @@
 
           packages.default = nixvim.legacyPackages.${system}.makeNixvimWithModule nixvimModule;
 
-          formatter = pkgs.nixfmt-rfc-style;
+          devShells.default =
+            with pkgs;
+            mkShell {
+              buildInputs = [
+                nixd
+                nixfmt-rfc-style
+              ];
+            };
         };
     };
 }

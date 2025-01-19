@@ -48,6 +48,11 @@
           __unkeyed-2 = "prettier";
           stop_after_first = true;
         };
+        svelte = {
+          __unkeyed-1 = "prettierd";
+          __unkeyed-2 = "prettier";
+          stop_after_first = true;
+        };
         java = [ "google-java-format" ];
         python = [ "black" ];
         lua = [ "stylua" ];

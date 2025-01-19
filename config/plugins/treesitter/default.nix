@@ -13,6 +13,7 @@
     nixvimInjections = true;
 
     grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
+      svelte
       javascript
       typescript
       html

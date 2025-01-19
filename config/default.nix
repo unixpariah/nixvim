@@ -1,15 +1,14 @@
 {
   imports = [
     ./plugins
+    ./keymaps
   ];
 
   colorschemes.base16 = {
     enable = true;
-    colorscheme = "tokyo-night-storm";
+    colorscheme = "catppuccin";
     settings.telescope_borders = true;
   };
-
-  globals.mapleader = " ";
 
   clipboard = {
     providers.wl-copy.enable = true;
@@ -37,15 +36,9 @@
     grepprg = "rg --vimgrep";
     grepformat = "%f:%l:%c:%m";
     updatetime = 50;
-    completeopt = [
-      "menuone"
-      "noselect"
-      "noinsert"
-    ];
     swapfile = false;
     backup = false;
     undofile = true;
-    termguicolors = true;
     signcolumn = "yes";
     foldcolumn = "0";
     foldlevel = 99;
@@ -53,7 +46,6 @@
     foldenable = true;
     foldmethod = "expr";
     foldexpr = "v:lua.vim.treesitter.foldexpr()";
-    timeoutlen = 200;
     encoding = "utf-8";
     fileencoding = "utf-8";
     list = true;

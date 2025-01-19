@@ -100,6 +100,10 @@
           };
         };
       };
+      svelte = {
+        enable = true;
+        package = null;
+      };
       eslint = {
         package = null;
         enable = true;
