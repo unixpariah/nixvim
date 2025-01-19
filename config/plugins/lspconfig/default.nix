@@ -178,6 +178,10 @@
         enable = true;
         package = null;
       };
+      docker_compose_language_service = {
+        enable = true;
+        package = null;
+      };
     };
 
     keymaps = {
