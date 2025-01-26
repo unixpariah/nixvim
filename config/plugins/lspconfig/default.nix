@@ -23,6 +23,7 @@
         enable = true;
         package = null;
       };
+      typst_lsp.enable = false;
       lua_ls = {
         enable = true;
         package = null;
