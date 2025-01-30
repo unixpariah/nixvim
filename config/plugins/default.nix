@@ -19,5 +19,6 @@
     ./vim-highlightedyank
     ./notify
     ./lint
+    ./undotree
   ];
 }
